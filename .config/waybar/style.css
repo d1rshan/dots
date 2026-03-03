@@ -1,76 +1,103 @@
-/* ───────────────────────────────────────────────────────────────────
-   「✦ WAYBAR STYLES ✦ 」
-   ──────────────────────────────────────────────────────────────── */
-
-/* ── IMPORTS ──────────────────────────────────────────────────────*/
+/* Alternative pill-style theme (keeps existing style.css untouched) */
 @import "../../.cache/wal/colors-waybar.css";
 
-/* ── GLOBAL ───────────────────────────────────────────────────────*/
 * {
-  font-family: "JetBrainsMono Nerd Font";
+  font-family: "GeistMono Nerd Font";
   font-size: 14px;
+  font-weight: 500;
   border: none;
-  border-radius: 0;
   min-height: 0;
 }
 
 window#waybar {
-  background: transparent; 
+  background: transparent;
   color: @foreground;
 }
 
-/* ── MODULES CONTAINER ────────────────────────────────────────────*/
 .modules-center {
-  background: alpha(@background,0.5);
-  border: 1px solid #5E5E5E;
-  border-radius: 10px;
-  padding: 12px 10px; 
+  background: rgba(20, 20, 28, 0.34);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 8px;
 }
 
-/* ── WORKSPACES ───────────────────────────────────────────────────*/
+#workspaces,
+#window,
+#mpris,
+#clock,
+#custom-pomo,
+#pulseaudio,
+#custom-memorypie,
+#battery,
+#tray {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  margin: 0 5px;
+  padding: 2px 11px;
+  color: @foreground;
+}
+
 #workspaces {
-  margin-right: 10px;
-  padding-right: 10px;
-  border-right: 1px solid alpha(@foreground, 0.2); 
+  padding: 1px 8px;
+}
+
+#window {
+  padding: 2px 12px;
+}
+
+#custom-separator {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 2px;
+  padding: 0 2px;
 }
 
 #workspaces button {
-  padding: 0 2px;
-  color: alpha(@color7, 0.4);
-  transition: 0.3s ease;
-}
-
-#workspaces button:hover {
-  background: none;
-  color: @foreground;
-  box-shadow: none;
-  text-shadow: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.65);
+  padding: 0 4px;
+  margin: 0;
+  border-radius: 999px;
 }
 
 #workspaces button.active {
+  background: transparent;
+  border: none;
   color: @color5;
 }
 
-/* ── MODULES ──────────────────────────────────────────────────────*/
-#clock,
-#battery,
-#pulseaudio,
-#custom-pomo,
+#workspaces button:hover {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 1);
+}
+
 #tray {
-  padding: 0 8px;
-  margin: 0;
+  padding: 2px 10px;
 }
 
-#clock:hover,
-#battery:hover,
-#pulseaudio:hover,
-#custom-pomo:hover {
-  background: alpha(@foreground, 0.1);
-  border-radius: 8px;
+#tray > .item image {
+  min-width: 16px;
+  min-height: 16px;
 }
 
-/* ── POMODORO ─────────────────────────────────────────────────────*/
+#mpris {
+  padding: 2px 12px;
+}
+
 #custom-pomo {
-  color: alpha(@foreground, 0.6);
-  font-weight: bold;
+  font-weight: 700;
+}
+
+#mpris:hover,
+#window:hover,
+#clock:hover,
+#custom-pomo:hover,
+#pulseaudio:hover,
+#custom-memorypie:hover,
+#battery:hover,
+#tray:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
 }
