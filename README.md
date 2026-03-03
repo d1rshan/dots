@@ -85,8 +85,7 @@ cp -r ~/dot-files/.local/bin ~/.local/ 2>/dev/null || true
 └── walls
 ```
 
-## Star History
-
+## Stonks
 <a href="https://www.star-history.com/#d1rshan/dot-files&Date">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=d1rshan/dot-files&type=Date&theme=dark" />

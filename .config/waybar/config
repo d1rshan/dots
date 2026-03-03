@@ -1,26 +1,26 @@
-// ───────────────────────────────────────────────────────────────────
-//  「✦ WAYBAR CONFIG ✦ 」
-// ───────────────────────────────────────────────────────────────────
-
-// ── BAR SETTINGS ───────────────────────────────────────────────────
 {
   "layer": "top",
   "exclusive": true,
   "position": "top",
-  "margin-top": 10,
+  "margin-top": 9,
+  "width": 1450,
   "reload_style_on_change": true,
 
-// ── MODULES ────────────────────────────────────────────────────────
   "modules-center": [
+    "hyprland/window",
+    "custom/separator",
     "hyprland/workspaces",
+    "custom/separator",
+    "mpris",
+    "custom/separator",
     "clock",
     "custom/pomo",
     "pulseaudio",
+    "custom/memorypie",
     "battery",
     "tray"
   ],
 
-// ── WORKSPACES ─────────────────────────────────────────────────────
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
@@ -29,18 +29,50 @@
       "empty": ""
     },
     "persistent-workspaces": {
-      "*": [1,2,3,4,5]
+      "*": [1, 2, 3, 4, 5]
     }
   },
 
-// ── CLOCK ──────────────────────────────────────────────────────────
+  "hyprland/window": {
+    "format": "{class}",
+    "rewrite": {
+      "^$": "Desktop"
+    },
+    "max-length": 15,
+    "min-length": 15,
+    "separate-outputs": true,
+    "tooltip": false
+  },
+
+  "custom/separator": {
+    "format": "|",
+    "tooltip": false
+  },
+
+  "mpris": {
+    "format": "{player_icon} {title}",
+    "format-paused": "⏸ {title}",
+    "max-length": 25,
+    "min-length": 25,
+    "on-click": "playerctl play-pause",
+    "player-icons": {
+      "firefox": "",
+      "zen": "",
+      "chromium": "",
+      "spotify": "",
+      "vlc": "󰕼",
+      "default": ""
+    },
+    "ignored-players": ["mpd"],
+    "tooltip": true
+  },
+
   "clock": {
     "format": "{:%I:%M %p}",
     "format-alt": "{:%a, %d %b}",
     "tooltip": false
   },
 
-// ── AUDIO ──────────────────────────────────────────────────────────
   "pulseaudio": {
     "format": "{icon}  {volume}%",
     "format-muted": "󰝟",
@@ -51,19 +83,24 @@
     "tooltip": false
   },
 
-// ── BATTERY ────────────────────────────────────────────────────────
+  "custom/memorypie": {
+    "exec": "~/.config/waybar/scripts/memory_pie.sh",
+    "interval": 2,
+    "return-type": "json",
+    "tooltip": true
+  },
+
   "battery": {
     "states": {
-        "warning": 30,
-        "critical": 15
+      "warning": 30,
+      "critical": 15
     },
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
-    "format-icons": ["󰂃","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂"],
+    "format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"],
     "tooltip": false
   },
 
-// ── POMODORO ───────────────────────────────────────────────────────
   "custom/pomo": {
     "exec": "~/.config/waybar/scripts/pomo.sh",
     "on-click": "~/.config/waybar/scripts/pomo.sh toggle",
@@ -72,9 +109,8 @@
     "format": " {}"
   },
 
-// ── TRAY ───────────────────────────────────────────────────────────
   "tray": {
-    "spacing": 10,
+    "spacing": 8,
     "tooltip": false
   }
 }
