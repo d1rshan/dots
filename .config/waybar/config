@@ -11,11 +11,12 @@
     "custom/separator",
     "hyprland/workspaces",
     "custom/separator",
-    "mpris",
+    "custom/mpris",
     "custom/separator",
     "clock",
     "custom/pomo",
     "pulseaudio",
+    "backlight",
     "custom/memorypie",
     "battery",
     "tray"
@@ -30,7 +31,8 @@
     },
     "persistent-workspaces": {
       "*": [1, 2, 3, 4, 5]
-    }
+    },
+    "tooltip": false
   },
 
   "hyprland/window": {
@@ -49,22 +51,14 @@
     "tooltip": false
   },
 
-  "mpris": {
-    "format": "{player_icon} {title}",
-    "format-paused": "⏸ {title}",
+  "custom/mpris": {
+    "exec": "~/.config/waybar/scripts/mpris.sh",
+    "interval": 2,
+    "return-type": "json",
     "max-length": 25,
     "min-length": 25,
     "on-click": "playerctl play-pause",
-    "player-icons": {
-      "firefox": "",
-      "zen": "",
-      "chromium": "",
-      "spotify": "",
-      "vlc": "󰕼",
-      "default": ""
-    },
-    "ignored-players": ["mpd"],
-    "tooltip": true
+    "tooltip": false
   },
 
   "clock": {
@@ -83,11 +77,20 @@
     "tooltip": false
   },
 
+  "backlight": {
+    "format": "{icon}  {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "on-scroll-up": "brightnessctl -d amdgpu_bl1 -e4 -n2 set 5%+",
+    "on-scroll-down": "brightnessctl -d amdgpu_bl1 -e4 -n2 set 5%-",
+    "smooth-scrolling-threshold": 0.2,
+    "tooltip": false
+  },
+
   "custom/memorypie": {
     "exec": "~/.config/waybar/scripts/memory_pie.sh",
     "interval": 2,
     "return-type": "json",
-    "tooltip": true
+    "tooltip": false
   },
 
   "battery": {
@@ -106,7 +109,8 @@
     "on-click": "~/.config/waybar/scripts/pomo.sh toggle",
     "interval": 1,
     "return-type": "json",
-    "format": " {}"
+    "format": " {}",
+    "tooltip": false
   },
 
   "tray": {

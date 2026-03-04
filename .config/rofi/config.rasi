@@ -8,7 +8,7 @@ configuration {
     show-icons: true;
     sidebar-mode: false;
 
-    display-drun: "Apps";
+    display-drun: "";
 }
 
 /* ── THEME ────────────────────────────────────────────────────────*/

@@ -30,36 +30,7 @@ CHOICE=$(
       printf '%s\0icon\x1f%s\n' "$(basename "$f")" "$f"
     done |
     rofi -dmenu -i -show-icons \
-      -p "Select Wallpaper" \
-      -theme "$HOME/.config/rofi/themes/glass.rasi" \
-      -theme-str '
-      window {
-        width: 58%;
-      }
-
-      listview {
-        layout: vertical;
-        columns: 3;
-        fixed-columns: true;
-        lines: 3;
-        fixed-height: false;
-        dynamic: true;
-      }
-
-      element {
-        orientation: vertical;
-      }
-
-      element-icon {
-        size: 200px;
-        horizontal-align: 0.5;
-        margin: 0px 0px 2px 0px;
-      }
-
-      element-text {
-        horizontal-align: 0.5;
-      }
-      '
+      -theme "$HOME/.config/rofi/themes/wallpaper-grid.rasi"
 )
 
 [[ -z "$CHOICE" ]] && exit 0

@@ -1,4 +1,4 @@
-/* Frosted pill-style Rofi theme aligned with Waybar pill look */
+/* Wallpaper picker theme: frosty window + stable image grid */
 @import "~/.cache/wal/colors-rofi-dark.rasi"
 
 * {
@@ -9,12 +9,12 @@ window {
     transparency: "real";
     location: center;
     anchor: center;
-    width: 26%;
+    width: 58%;
     border: 1px;
     border-color: rgba(255, 255, 255, 0.22);
     border-radius: 24px;
     background-color: rgba(20, 20, 28, 0.36);
-    padding: 9px;
+    padding: 10px;
 }
 
 mainbox {
@@ -40,7 +40,7 @@ prompt {
 entry {
     background-color: transparent;
     text-color: @foreground;
-    placeholder: "Search apps...";
+    placeholder: "Search wallpapers...";
     placeholder-color: rgba(255, 255, 255, 0.55);
     expand: true;
 }
@@ -51,38 +51,42 @@ listview {
     padding: 2px;
     margin: 0;
     spacing: 10px;
-    columns: 1;
-    lines: 8;
-    cycle: true;
-    dynamic: true;
-    fixed-height: false;
     layout: vertical;
+    columns: 3;
+    fixed-columns: true;
+    lines: 3;
+    fixed-height: false;
+    dynamic: true;
+    cycle: true;
     scrollbar: false;
 }
 
 element {
-    orientation: horizontal;
+    orientation: vertical;
     children: [ element-icon, element-text ];
     background-color: rgba(255, 255, 255, 0.14);
     border: 1px;
     border-color: rgba(255, 255, 255, 0.22);
-    border-radius: 999px;
-    padding: 8px 12px;
+    border-radius: 16px;
+    padding: 8px;
     margin: 0;
-    spacing: 10px;
+    spacing: 6px;
     text-color: @foreground;
 }
 
 element-icon {
     background-color: transparent;
-    size: 1.1em;
+    size: 170px;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    border-radius: 10px;
 }
 
 element-text {
     background-color: transparent;
     text-color: inherit;
     highlight: none;
-    expand: true;
+    horizontal-align: 0.5;
     vertical-align: 0.5;
     format: "{text}";
 }
@@ -92,11 +96,9 @@ element normal.normal {
     text-color: @foreground;
 }
 
-element selected.normal {
-    background-color: @selected-normal-background;
-    border: 2px;
-    border-color: rgba(255, 255, 255, 0.30);
-    text-color: @selected-normal-foreground;
+element alternate.normal {
+    background-color: rgba(255, 255, 255, 0.14);
+    text-color: @foreground;
 }
 
 element normal.active {
@@ -106,6 +108,13 @@ element normal.active {
     text-color: @active-foreground;
 }
 
+element selected.normal {
+    background-color: @selected-normal-background;
+    border: 2px;
+    border-color: rgba(255, 255, 255, 0.30);
+    text-color: @selected-normal-foreground;
+}
+
 element selected.active {
     background-color: @selected-active-background;
     border: 2px;
@@ -113,31 +122,6 @@ element selected.active {
     text-color: @selected-active-foreground;
 }
 
-element normal.urgent,
-element selected.urgent {
-    background-color: rgba(255, 255, 255, 0.18);
-    border: 1px;
-    border-color: @selected-urgent-background;
-    text-color: @foreground;
-}
-
-element alternate.normal,
-element alternate.active,
-element alternate.urgent {
-    background-color: rgba(255, 255, 255, 0.14);
-    border-color: rgba(255, 255, 255, 0.22);
-    text-color: @foreground;
-}
-
 scrollbar {
     enabled: false;
-}
-
-message {
-    background-color: transparent;
-}
-
-textbox {
-    background-color: transparent;
-    text-color: @foreground;
 }

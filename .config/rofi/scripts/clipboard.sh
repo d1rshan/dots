@@ -96,9 +96,12 @@ build_rofi_input() {
 
 selection_index=$(
   build_rofi_input | rofi -dmenu -i -show-icons -format i \
-    -p "Clipboard" \
     -theme "$ROFI_THEME" \
     -theme-str '
+    entry {
+      placeholder: "Search clipboard history...";
+    }
+
     listview {
       lines: 9;
     }

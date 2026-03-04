@@ -23,10 +23,11 @@ window#waybar {
 
 #workspaces,
 #window,
-#mpris,
+#custom-mpris,
 #clock,
 #custom-pomo,
 #pulseaudio,
+#backlight,
 #custom-memorypie,
 #battery,
 #tray {
@@ -55,22 +56,28 @@ window#waybar {
 
 #workspaces button {
   background: transparent;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.42);
   padding: 0 4px;
   margin: 0;
   border-radius: 999px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  transition: color 140ms ease;
 }
 
 #workspaces button.active {
   background: transparent;
   border: none;
   color: @color5;
+  box-shadow: none;
 }
 
 #workspaces button:hover {
   background: transparent;
   border: none;
-  color: rgba(255, 255, 255, 1);
+  box-shadow: none;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 #tray {
@@ -82,7 +89,7 @@ window#waybar {
   min-height: 16px;
 }
 
-#mpris {
+#custom-mpris {
   padding: 2px 12px;
 }
 
@@ -90,14 +97,35 @@ window#waybar {
   font-weight: 700;
 }
 
-#mpris:hover,
+#custom-mpris:hover,
 #window:hover,
 #clock:hover,
 #custom-pomo:hover,
 #pulseaudio:hover,
+#backlight:hover,
 #custom-memorypie:hover,
 #battery:hover,
 #tray:hover {
   background: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.3);
+}
+
+#backlight {
+  color: @foreground;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.18);
+}
+
+#backlight:hover {
+  animation: sunPulse 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes sunPulse {
+  0% {
+    color: @foreground;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.12);
+  }
+  100% {
+    color: @foreground;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.34);
+  }
 }
