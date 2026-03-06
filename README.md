@@ -94,4 +94,4 @@ cp -r ~/dot-files/.local/bin ~/.local/ 2>/dev/null || true
   </picture>
 </a>
 
-hyprland dotfiles by **[@d1rshan](https://github.com/d1rshan)**
+hyprland dotfiles by **[@d1rshan](https://github.com/d1rshan)** & **[@AdItHyA](https://github.com/Adithya010605)**
