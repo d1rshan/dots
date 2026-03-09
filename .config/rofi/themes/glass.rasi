@@ -2,7 +2,7 @@
 @import "~/.cache/wal/colors-rofi-dark.rasi"
 
 * {
-    font: "GeistMono Nerd Font 15px";
+    font: "JetBrainsMono Nerd Font 14px";
 }
 
 window {
@@ -11,9 +11,9 @@ window {
     anchor: center;
     width: 26%;
     border: 1px;
-    border-color: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.12);
     border-radius: 24px;
-    background-color: rgba(20, 20, 28, 0.36);
+    background-color: rgba(20, 20, 28, 0.37);
     padding: 9px;
 }
 
