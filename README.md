@@ -55,10 +55,20 @@ cp -r ~/dot-files/.config/{hypr,waybar,rofi,kitty,nvim,fastfetch,fish,mako} ~/.c
 cp ~/dot-files/.config/starship.toml ~/.config/
 cp -r ~/dot-files/.local/bin ~/.local/ 2>/dev/null || true
 ```
-4. Restart your session or reload apps (`hyprctl reload`, restart `waybar`, etc.).
+4. Generate the initial `pywal` cache so `waybar` and `rofi` have colors to read on first launch:
+
+```bash
+mkdir -p ~/walls
+wal -i ~/walls/<your-wallpaper>
+```
+
+5. Restart your session or reload apps (`hyprctl reload`, restart `waybar`, etc.).
 
 > [!TIP]
 > Wallpapers: put your files in `~/walls` (used by the rofi wallpaper picker).
+
+> [!NOTE]
+> The first `wal` run is required because these configs read generated `pywal` color/cache files. Without that initial cache, `waybar` and `rofi` can start in a broken state or crash.
 
 > [!TIP]
 > Main mod key: this setup uses `LALT`. If you want the usual `SUPER`, change `$mainMod = LALT` to `$mainMod = SUPER` in your Hypr config.
