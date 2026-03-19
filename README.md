@@ -34,6 +34,14 @@
 
 ## Installation
 
+quick setup:
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/krishkalaria12/dots/main/setup.sh)
+```
+
+manual steps:
+
 1. Install prerequisites (Arch):
 
 ```bash
