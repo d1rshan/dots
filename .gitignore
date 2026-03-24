@@ -7,6 +7,9 @@
 # ALLOW README
 !README.md
 
+# ALLOW BOOTSTRAP SCRIPT
+!setup.sh
+
 # ALLOW SCRIPTS
 !.local/
 !.local/bin/

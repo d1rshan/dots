@@ -34,6 +34,14 @@
 
 ## Installation
 
+quick setup:
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/d1rshan/dots/main/setup.sh)
+```
+
+manual steps:
+
 1. Install prerequisites (Arch):
 
 ```bash
@@ -49,16 +57,26 @@ cp -r ~/.config ~/.config.bak
 3. Clone and copy:
 
 ```bash
-git clone https://github.com/d1rshan/dot-files.git ~/dot-files
+git clone https://github.com/d1rshan/dots.git ~/dots
 mkdir -p ~/.config
-cp -r ~/dot-files/.config/{hypr,waybar,rofi,kitty,nvim,fastfetch,fish,mako} ~/.config/
-cp ~/dot-files/.config/starship.toml ~/.config/
-cp -r ~/dot-files/.local/bin ~/.local/ 2>/dev/null || true
+cp -r ~/dots/.config/{hypr,waybar,rofi,kitty,nvim,fastfetch,fish,mako} ~/.config/
+cp ~/dots/.config/starship.toml ~/.config/
+cp -r ~/dots/.local/bin ~/.local/ 2>/dev/null || true
 ```
-4. Restart your session or reload apps (`hyprctl reload`, restart `waybar`, etc.).
+4. Generate the initial `pywal` cache so `waybar` and `rofi` have colors to read on first launch:
+
+```bash
+mkdir -p ~/walls
+wal -i ~/walls/<your-wallpaper>
+```
+
+5. Restart your session or reload apps (`hyprctl reload`, restart `waybar`, etc.).
 
 > [!TIP]
 > Wallpapers: put your files in `~/walls` (used by the rofi wallpaper picker).
+
+> [!NOTE]
+> The first `wal` run is required because these configs read generated `pywal` color/cache files. Without that initial cache, `waybar` and `rofi` can start in a broken state or crash.
 
 > [!TIP]
 > Main mod key: this setup uses `LALT`. If you want the usual `SUPER`, change `$mainMod = LALT` to `$mainMod = SUPER` in your Hypr config.
@@ -86,12 +104,12 @@ cp -r ~/dot-files/.local/bin ~/.local/ 2>/dev/null || true
 ```
 
 ## Stonks
-<a href="https://www.star-history.com/#d1rshan/dot-files&Date">
+<a href="https://www.star-history.com/#d1rshan/dots&Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=d1rshan/dot-files&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=d1rshan/dot-files&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=d1rshan/dot-files&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=d1rshan/dots&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=d1rshan/dots&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=d1rshan/dots&type=Date" />
   </picture>
 </a>
 
-hyprland dotfiles by **[@d1rshan](https://github.com/d1rshan)**
+hyprland dotfiles by **[@d1rshan](https://github.com/d1rshan)** & **[@AdItHyA](https://github.com/Adithya010605)**

@@ -2,7 +2,7 @@
 @import "../../.cache/wal/colors-waybar.css";
 
 * {
-  font-family: "GeistMono Nerd Font";
+  font-family: "JetBrainsMono Nerd Font";
   font-size: 14px;
   font-weight: 500;
   border: none;
@@ -15,9 +15,9 @@ window#waybar {
 }
 
 .modules-center {
-  background: rgba(20, 20, 28, 0.34);
+  background: rgba(20, 20, 28, 0.37);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 999px;
+  border-radius: 24px;
   padding: 8px;
 }
 
@@ -69,7 +69,7 @@ window#waybar {
 #workspaces button.active {
   background: transparent;
   border: none;
-  color: white;
+  color: @color5;
   box-shadow: none;
 }
 
