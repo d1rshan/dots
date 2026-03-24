@@ -69,7 +69,7 @@ window#waybar {
 #workspaces button.active {
   background: transparent;
   border: none;
-  color: @color5;
+  color: white;
   box-shadow: none;
 }
 
@@ -91,10 +91,6 @@ window#waybar {
 
 #custom-mpris {
   padding: 2px 12px;
-}
-
-#custom-pomo {
-  font-weight: 700;
 }
 
 #custom-mpris:hover,

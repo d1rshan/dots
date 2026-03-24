@@ -1,15 +1,24 @@
-font=JetBrainsMono Nerd Font 11
+font=GeistMono Nerd Font Light 10
 
 anchor=top-right
 
-background-color=#0f221480
-text-color=#c3c7c4
+background-color=#14141C57
+text-color=#e3e8f0FF
 
 border-size=1
-border-color=#5E5E5E
-border-radius=10
+border-color=#FFFFFF38
+border-radius=16
 
-padding=12
+width=250
+max-visible=3
+margin=8
+padding=10,14
 layer=overlay
 
-default-timeout=5000
+markup=0
+default-timeout=12000
+on-button-left=dismiss
+on-button-right=dismiss
+
+[summary~="([Bb]attery.*(full|charged))|((full|charged).*[Bb]attery)|([Cc]harged.*100%)|(100%.*[Cc]harged)"]
+invisible=1

@@ -1,0 +1,22 @@
+@import "~/.config/rofi/themes/glass.rasi"
+
+mainbox {
+    children: [ listview ];
+}
+
+window {
+    width: 15%;
+    padding: 7px;
+    border-radius: 22px;
+}
+
+listview {
+    lines: 5;
+    cycle: true;
+    spacing: 8px;
+}
+
+element {
+    padding: 10px 12px;
+    border-radius: 999px;
+}
