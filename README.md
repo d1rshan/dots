@@ -34,7 +34,7 @@
 
 ## Installation
 
-quick setup:
+quick setup: (experimental - not stable yet)
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/d1rshan/dots/main/setup.sh)
