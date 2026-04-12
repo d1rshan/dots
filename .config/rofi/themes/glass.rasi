@@ -1,4 +1,3 @@
-/* Frosted pill-style Rofi theme aligned with Waybar pill look */
 @import "~/.cache/wal/colors-rofi-dark.rasi"
 
 * {

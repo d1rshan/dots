@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Clipboard picker for rofi (mixed text + images in one list)
 
 set -euo pipefail
 

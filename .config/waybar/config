@@ -78,7 +78,7 @@
   },
 
   "backlight": {
-    "format": "{icon}  {percent}%",
+    "format": "{icon} {percent}%",
     "format-icons": ["󰃞", "󰃟", "󰃠"],
     "on-scroll-up": "brightnessctl -d amdgpu_bl1 -e4 -n2 set 5%+",
     "on-scroll-down": "brightnessctl -d amdgpu_bl1 -e4 -n2 set 5%-",
@@ -112,7 +112,7 @@
     "on-scroll-down": "~/.config/waybar/scripts/pomo.sh preset-prev",
     "interval": 1,
     "return-type": "json",
-    "format": "󰔟 {}",
+    "format": "{}",
     "tooltip": false
   },
 

@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Emoji picker via rofi-emoji mode.
 
 set -euo pipefail
 

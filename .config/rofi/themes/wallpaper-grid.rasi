@@ -1,8 +1,7 @@
-/* Wallpaper picker theme: frosty window + stable image grid */
 @import "~/.cache/wal/colors-rofi-dark.rasi"
 
 * {
-    font: "GeistMono Nerd Font 15px";
+    font: "JetBrainsMono Nerd Font 14px";
 }
 
 window {
