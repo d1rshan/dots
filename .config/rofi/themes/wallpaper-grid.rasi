@@ -54,8 +54,8 @@ listview {
     columns: 3;
     fixed-columns: true;
     lines: 3;
-    fixed-height: false;
-    dynamic: true;
+    fixed-height: true;
+    dynamic: false;
     cycle: true;
     scrollbar: false;
 }

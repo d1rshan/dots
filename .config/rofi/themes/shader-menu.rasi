@@ -5,7 +5,7 @@ mainbox {
 }
 
 window {
-    width: 15%;
+    width: 14%;
     padding: 7px;
     border-radius: 22px;
 }
@@ -21,6 +21,7 @@ listview {
 element {
     padding: 10px 20px;
     border-radius: 999px;
+    /* Remove icon child to fix left spacing since icons are in the text */
     children: [ element-text ];
 }
 
